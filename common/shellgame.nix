@@ -8,6 +8,7 @@
       h = "cd ~";
       ls = "eza --icons -l -T -L=1";
       cat = "bat";
+      weather = "curl wttr.in/dallas";
     };
     enableAutosuggestions = true;
     enableCompletion = true;

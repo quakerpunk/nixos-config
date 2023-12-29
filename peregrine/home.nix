@@ -78,4 +78,35 @@
     ../common/apps/terminal/kitty.nix # config for Kitty
   ];
 
+  gtk.cursorTheme = {
+    package = pkgs.quintom-cursor-theme;
+    name = "Quintom_Ink";
+    size = 36;
+  };
+ 
+  wayland.windowManager.hyprland = {
+    enable = true;
+    settings = {};
+    extraConfig = ''
+      exec-once = hyprctl setcursor '' + config.gtk.cursorTheme.name + " " + builtins.toString config.gtk.cursorTheme.size + ''
+
+      #exec-once = waybar
+      #exec-once = emacs --daemon
+
+      general {
+        layout = master
+        cursor_inactive_timeout = 30
+        gaps_in = 7
+        gaps_out = 7
+      }
+
+      bind=SUPER,RETURN,exec,kitty
+      bind=SUPERSHIFT,Q,exit
+
+      monitor=Virtual-1,1680x1050,auto,1
+      monitor=,1680x1050,auto,1
+    '';
+    systemd.enable = true;
+  };
+
 }

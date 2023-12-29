@@ -81,6 +81,7 @@
   environment.pathsToLink = [ "/share/zsh" ];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
+  programs.hyprland.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

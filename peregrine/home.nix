@@ -30,6 +30,8 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    alacritty
+    kitty
     neofetch
     onefetch
     eza
@@ -73,6 +75,7 @@
   imports = [
     ../common/shellgame.nix # zsh config
     ../common/git.nix # git config
+    ../common/apps/terminal/kitty.nix # config for Kitty
   ];
 
 }

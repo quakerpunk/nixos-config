@@ -31,12 +31,12 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     alacritty
+    eza
+    fd
     kitty
     neofetch
     onefetch
-    eza
     ripgrep
-    fd
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -73,14 +73,14 @@
   programs.home-manager.enable = true;
 
   imports = [
-    ../common/shellgame.nix # zsh config
-    ../common/git.nix # git config
     ../common/apps/terminal/kitty.nix # config for Kitty
+    ../common/git.nix # git config
+    ../common/shellgame.nix # zsh config
   ];
 
   gtk.cursorTheme = {
     package = pkgs.quintom-cursor-theme;
-    name = "Quintom_Ink";
+    name = "Quintom_Snow";
     size = 36;
   };
  
@@ -88,7 +88,7 @@
     enable = true;
     settings = {};
     extraConfig = ''
-      exec-once = hyprctl setcursor '' + config.gtk.cursorTheme.name + " " + builtins.toString config.gtk.cursorTheme.size + ''
+      exec-once = hyprctl setcursor Quintom_Snow 36
 
       #exec-once = waybar
       #exec-once = emacs --daemon
@@ -100,8 +100,20 @@
         gaps_out = 7
       }
 
-      bind=SUPER,RETURN,exec,kitty
-      bind=SUPERSHIFT,Q,exit
+      misc {
+        #disable_hyprland_logo = true
+        disable_splash_rendering = true
+        force_default_wallpaper = 0
+      }
+
+      $mainMod = SUPER
+      bind=$mainMod, RETURN, exec, alacritty
+      bind=$mainMod, e, exec, emacs
+      bind=$mainMod, f, exec, thunar
+      bind=$mainMod, w, exec, firefox
+      bind=$mainMod CTRL, l, exec, swaylock
+      bind=$mainMod SHIFT, T, togglefloating
+      bind=$mainMod SHIFT, Q, exit
 
       monitor=Virtual-1,1680x1050,auto,1
       monitor=,1680x1050,auto,1

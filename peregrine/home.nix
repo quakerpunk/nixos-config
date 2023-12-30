@@ -33,6 +33,7 @@
     alacritty
     eza
     fd
+    fnott
     kitty
     neofetch
     onefetch
@@ -71,6 +72,27 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  services.fnott = {
+    enable = true;
+    settings = {
+      main = {
+       anchor = "top-right";
+       body-font = "sans serif";
+       body-color = "ffffffff";
+       body-format  = " %b";
+       border-size = 0;
+       min-width = 300;
+       stacking-order = "bottom-up";
+       summary-font = "sans serif";
+       summary-color = "ffffffff";
+       summary-format = "<b>%s</b>\n";
+       title-font = "sans serif";
+       title-color = "ffffffff";
+       title-format = "<i>%a%A</i>";
+      };
+    };
+  };
 
   imports = [
     ../common/apps/terminal/kitty.nix # config for Kitty
@@ -111,9 +133,11 @@
       bind=$mainMod, e, exec, emacs
       bind=$mainMod, f, exec, thunar
       bind=$mainMod, w, exec, firefox
+      bind=$mainMod, x, exec, fnottctl dismiss
       bind=$mainMod CTRL, l, exec, swaylock
       bind=$mainMod SHIFT, T, togglefloating
       bind=$mainMod SHIFT, Q, exit
+      bind=$mainMod SHIFT, X, exec, fnottctl dismiss all
 
       monitor=Virtual-1,1680x1050,auto,1
       monitor=,1680x1050,auto,1

@@ -107,7 +107,7 @@
       }
 
       $mainMod = SUPER
-      bind=$mainMod, RETURN, exec, alacritty
+      bind=$mainMod, RETURN, exec, kitty
       bind=$mainMod, e, exec, emacs
       bind=$mainMod, f, exec, thunar
       bind=$mainMod, w, exec, firefox

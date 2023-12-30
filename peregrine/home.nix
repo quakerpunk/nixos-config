@@ -73,31 +73,11 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  services.fnott = {
-    enable = true;
-    settings = {
-      main = {
-       anchor = "top-right";
-       body-font = "sans serif";
-       body-color = "ffffffff";
-       body-format  = " %b";
-       border-size = 0;
-       min-width = 300;
-       stacking-order = "bottom-up";
-       summary-font = "sans serif";
-       summary-color = "ffffffff";
-       summary-format = "<b>%s</b>\n";
-       title-font = "sans serif";
-       title-color = "ffffffff";
-       title-format = "<i>%a%A</i>";
-      };
-    };
-  };
-
   imports = [
     ../common/apps/terminal/kitty.nix # config for Kitty
     ../common/git.nix # git config
     ../common/shellgame.nix # zsh config
+    ../wm/hyprland/fnott.nix # fnott for notifications
   ];
 
   gtk.cursorTheme = {

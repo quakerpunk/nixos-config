@@ -85,7 +85,7 @@
     ../common/apps/terminal/kitty.nix # config for Kitty
     ../common/git.nix # git config
     ../common/shellgame.nix # zsh config
-    ../wm/hyprland/dbus.nix # dbus
+    # ../wm/hyprland/dbus.nix # dbus
     ../wm/hyprland/fnott.nix # fnott for notifications
   ];
 

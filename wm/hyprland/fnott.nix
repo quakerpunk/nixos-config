@@ -15,6 +15,9 @@
         body-color = "ffffffff";
         body-format  = " %b";
         border-size = 0;
+        default-timeout = 30;
+        idle-timeout = 0;
+        max-timeout = 30;
         min-width = 300;
         stacking-order = "bottom-up";
         summary-font = "sans serif";

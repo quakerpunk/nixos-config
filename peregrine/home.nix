@@ -99,6 +99,7 @@
     enable = true;
     settings = {};
     extraConfig = ''
+      exec-once = dbus-update-activation-environment DISPLAY XAUTHORITY WAYLAND_DISPLAY
       exec-once = hyprctl setcursor Quintom_Snow 36
 
       #exec-once = waybar

@@ -3,10 +3,10 @@
 {
   services.dbus = {
     enable = true;
-    packages = [ pkgs.dconf ];
+    #packages = [ pkgs.dconf ];
   };
 
-  programs.dconf = {
-    enable = true;
-  };
+  # programs.dconf = {
+  #   enable = true;
+  # };
 }

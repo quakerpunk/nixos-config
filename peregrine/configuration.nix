@@ -81,7 +81,13 @@
   environment.pathsToLink = [ "/share/zsh" ];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    xwayland = {
+      enable = true;
+    };
+    portalPackage = pkgs.xdg-desktop-portal-hyprland;
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

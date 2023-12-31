@@ -38,6 +38,14 @@
     neofetch
     onefetch
     ripgrep
+
+    # XDG Portal Setup
+    libsForQt5.qt5.qtwayland
+    qt6.qtwayland
+    xdg-utils
+    xdg-desktop-portal
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -77,6 +85,7 @@
     ../common/apps/terminal/kitty.nix # config for Kitty
     ../common/git.nix # git config
     ../common/shellgame.nix # zsh config
+    ../wm/hyprland/dbus.nix # dbus
     ../wm/hyprland/fnott.nix # fnott for notifications
   ];
 

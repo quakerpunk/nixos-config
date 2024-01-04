@@ -37,6 +37,7 @@
     kitty
     neofetch
     onefetch
+    polkit_gnome
     ripgrep
 
     # XDG Portal Setup

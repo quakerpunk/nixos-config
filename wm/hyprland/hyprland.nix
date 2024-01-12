@@ -14,10 +14,10 @@
   ];
 
   imports = [
-    ../common/apps/terminal/kitty.nix # config for Kitty
-    ../common/git.nix # git config
+    ../../common/apps/terminal/kitty.nix # config for Kitty
+    ../../common/git.nix # git config
     # ../wm/hyprland/dbus.nix # dbus
-    ../wm/hyprland/fnott.nix # fnott for notifications
+    ./fnott.nix # fnott for notifications
   ];
 
   gtk.cursorTheme = {

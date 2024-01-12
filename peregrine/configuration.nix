@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       # ../wm/hyprland/dbus.nix # dbus
+      ../system/hyprland.nix
     ];
 
   # Use the GRUB 2 boot loader.
@@ -83,25 +84,6 @@
   environment.pathsToLink = [ "/share/zsh" ];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
-  programs.hyprland = {
-    enable = true;
-    xwayland = {
-      enable = true;
-    };
-    portalPackage = pkgs.xdg-desktop-portal-hyprland;
-  };
-
-  # Configure xwayland
-  services.xserver = {
-    enable = true;
-    layout = "us";
-    xkbVariant = "";
-    #xkbOptions = "caps:escape";
-    displayManager.gdm = {
-      enable = true;
-      wayland = true;
-    };
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

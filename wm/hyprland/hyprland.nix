@@ -24,7 +24,6 @@
     # ../wm/hyprland/dbus.nix # dbus
     ./fnott.nix # fnott for notifications
     ../../common/bars/waybar.nix
-    ../fonts.nix
   ];
 
   gtk.cursorTheme = {

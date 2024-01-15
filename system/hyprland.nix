@@ -1,6 +1,9 @@
 { config, lib, pkgs, ... }:
 
 {
+  imports = [
+    ../wm/fonts.nix
+];
   environment.systemPackages = with pkgs; [
     wayland
   ];

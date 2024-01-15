@@ -4,6 +4,11 @@
   home.packages = with pkgs; [
     polkit_gnome
 
+    # Clipboard
+    wl-clipboard
+    cliphist
+    wl-clip-persist
+
     # XDG Portal Setup
     libsForQt5.qt5.qtwayland
     qt6.qtwayland
@@ -18,6 +23,7 @@
     ../../common/git.nix # git config
     # ../wm/hyprland/dbus.nix # dbus
     ./fnott.nix # fnott for notifications
+    ../../common/bars/waybar.nix
   ];
 
   gtk.cursorTheme = {
@@ -33,7 +39,7 @@
       exec-once = dbus-update-activation-environment DISPLAY XAUTHORITY WAYLAND_DISPLAY
       exec-once = hyprctl setcursor Quintom_Snow 36
 
-      #exec-once = waybar
+      exec-once = waybar
       #exec-once = emacs --daemon
 
       general {
@@ -53,6 +59,7 @@
       bind=$mainMod, RETURN, exec, kitty
       bind=$mainMod, e, exec, emacs
       bind=$mainMod, f, exec, thunar
+      bind=$mainMod, v, exec, cliphist list | fuzzel -d | cliphist decode | wl-copy
       bind=$mainMod, w, exec, firefox
       bind=$mainMod, x, exec, fnottctl dismiss
       bind=$mainMod CTRL, l, exec, swaylock

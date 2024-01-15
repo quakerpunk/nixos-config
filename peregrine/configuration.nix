@@ -43,7 +43,7 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
-
+  fonts.fontDir.enable = true;
   
 
   # Configure keymap in X11

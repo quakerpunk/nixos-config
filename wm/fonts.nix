@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  environemtn.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     (nerdfonts.override { fonts = [ "Inconsolata" ]; })
     font-awesome
     inconsolata

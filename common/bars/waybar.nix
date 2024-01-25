@@ -9,7 +9,7 @@
         margin-bottom = 0;
         margin-top = 0;
         position = "top";
-        spacing = 2;
+        spacing = 6;
         modules-left = [ "hyprland/workspaces" "cpu" "memory" "custom/disk_root" ];
         modules-center = [ "clock#date" "custom/os" "clock#time" ];
         modules-right = [ "custom/updates" "idle_inhibitor" "network" "tray" ];
@@ -32,6 +32,37 @@
            # "format-good" = ""; // An empty format will hide the module
            # "format-full" = "";
           "format-icons" = [" " " " " " " " " "];
+        };
+        "clock#date" = {
+          "format" = "{:%A, %B %d, %Y (%R)}";
+          "format-alt" = "{:%H:%M}";
+          "tooltip-format" = "<tt><small>{calendar}</small></tt>";
+          "calendar" = {
+            "mode"          = "year";
+            "mode-mon-col"  = 3;
+            "weeks-pos"     = "right";
+            "on-scroll"     = 1;
+            "on-click-right" = "mode";
+            "format" = {
+              "months" =     "<span color='#ffead3'><b>{}</b></span>";
+              "days" =       "<span color='#ecc6d9'><b>{}</b></span>";
+              "weeks" =      "<span color='#99ffdd'><b>W{}</b></span>";
+              "weekdays" =   "<span color='#ffcc66'><b>{}</b></span>";
+              "today" =      "<span color='#ff6699'><b><u>{}</u></b></span>";
+            };
+          };
+          "actions" =  {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+          };
+        };
+        "clock#time" = {
+          "interval" = 60;
+          "format" = "{:%H:%M}";
+          "max-length" = 25;
         };
         "custom/disk_root" = {
           "format" = "💽 {} ";

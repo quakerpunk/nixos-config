@@ -31,7 +31,7 @@
           "format-alt" = "{icon}  {time}";
            # "format-good" = ""; // An empty format will hide the module
            # "format-full" = "";
-          "format-icons" = [" ", " ", " ", " ", " "];
+          "format-icons" = [" " " " " " " " " "];
         };
         "custom/disk_root": {
           "format" = "💽 {} ";

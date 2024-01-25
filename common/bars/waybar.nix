@@ -33,7 +33,7 @@
            # "format-full" = "";
           "format-icons" = [" " " " " " " " " "];
         };
-        "custom/disk_root": {
+        "custom/disk_root" = {
           "format" = "💽 {} ";
           "interval" = 30;
           "exec" = "df -h --output=avail / | tail -1 | tr -d ' '";

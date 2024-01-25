@@ -34,7 +34,7 @@
           "format-icons" = [" " " " " " " " " "];
         };
         "clock#date" = {
-          "format" = "{:%A, %B %d, %Y (%R)}";
+          "format" = "{:%a %m/%d/%Y}";
           "format-alt" = "{:%H:%M}";
           "tooltip-format" = "<tt><small>{calendar}</small></tt>";
           "calendar" = {
@@ -83,7 +83,7 @@
     style = ''
       * {
         /*font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;*/
-        font-family: NotoSans Nerd Font Mono;
+        font-family: FontAwesome, "NotoSans Nerd Font Mono";
         font-size: 14px;
         border: none;
         border-radius: 0px;

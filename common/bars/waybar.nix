@@ -191,7 +191,8 @@
       #network { background-color: #1A1B26; }
       #bluetooth  { background-color: #1A1B26; }
       #battery  { background-color: #1A1B26; }
-      #clock { background-color: #1A1B26; }
+      /* #clock { background-color: #1A1B26; } */
+      #clock.time, #clock.date { background-color: transparent; }
       #custom-powermenu,
 
       #custom-notification {

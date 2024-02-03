@@ -42,7 +42,7 @@
     settings = {};
     extraConfig = ''
       exec-once = dbus-update-activation-environment DISPLAY XAUTHORITY WAYLAND_DISPLAY
-      exec-once = hyprctl setcursor Quintom_Snow 36
+      exec-once = hyprctl setcursor Vanilla_DMZ 24
 
       exec-once = waybar
       exec-once = waypaper --restore

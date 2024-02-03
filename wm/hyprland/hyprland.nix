@@ -9,6 +9,10 @@
     cliphist
     wl-clip-persist
 
+    # So perrty!
+    swaybg
+    waypaper
+
     # XDG Portal Setup
     libsForQt5.qt5.qtwayland
     qt6.qtwayland
@@ -22,6 +26,7 @@
     ../../common/apps/terminal/kitty.nix # config for Kitty
     ../../common/git.nix # git config
     # ../wm/hyprland/dbus.nix # dbus
+     ./fuzzel.nix # fuzzel
     ./fnott.nix # fnott for notifications
     ../../common/bars/waybar.nix
   ];
@@ -40,7 +45,7 @@
       exec-once = hyprctl setcursor Quintom_Snow 36
 
       exec-once = waybar
-      #exec-once = emacs --daemon
+      #exec-once = emacs -daemon
 
       general {
         layout = master
@@ -57,6 +62,7 @@
 
       $mainMod = SUPER
       bind=$mainMod, RETURN, exec, kitty
+      bind=$mainMod, Space, exec, fuzzel
       bind=$mainMod, e, exec, emacs
       bind=$mainMod, f, exec, thunar
       bind=$mainMod, v, exec, cliphist list | fuzzel -d | cliphist decode | wl-copy

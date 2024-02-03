@@ -97,7 +97,7 @@
       }
       #workspaces {
         background-color: transparent;
-        border: 1px solid #333331;
+        /* border: 1px solid #333331; */
         border-radius: 4px;
         margin-top: 0;
         margin-bottom: 0;
@@ -185,10 +185,12 @@
       #cpu,
       #memory,
       #backlight,
-      #window  { background-color: #1A1B26; }
+      #window { background-color: transparent; }
+      /* #window  { background-color: #1A1B26; } */
       #pulseaudio.audio { background-color: #1A1B26; }
       #pulseaudio.microphone,
-      #network { background-color: #1A1B26; }
+      /* #network { background-color: #1A1B26; } */
+      #network { background-color: transparent; }
       #bluetooth  { background-color: #1A1B26; }
       #battery  { background-color: #1A1B26; }
       /* #clock { background-color: #1A1B26; } */

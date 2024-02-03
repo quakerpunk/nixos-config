@@ -12,6 +12,7 @@
     # So perrty!
     swaybg
     waypaper
+    quintom-cursor-theme
 
     # XDG Portal Setup
     libsForQt5.qt5.qtwayland

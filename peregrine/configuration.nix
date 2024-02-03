@@ -77,6 +77,7 @@
     git
     bat
     wayland
+    quintom-cursor-theme
   ];
 
   environment.shells = with pkgs; [ zsh ];

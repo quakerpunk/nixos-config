@@ -46,6 +46,7 @@
       exec-once = hyprctl setcursor Quintom_Snow 36
 
       exec-once = waybar
+      exec-once = waypaper --restore
       #exec-once = emacs -daemon
 
       general {

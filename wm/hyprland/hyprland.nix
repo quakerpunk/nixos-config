@@ -40,6 +40,8 @@
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {};
+    xwayland = { enable = true; };
+    systemd.enable = true;
     extraConfig = ''
       exec-once = dbus-update-activation-environment DISPLAY XAUTHORITY WAYLAND_DISPLAY
       exec-once = hyprctl setcursor Vanilla_DMZ 24
@@ -77,6 +79,5 @@
       monitor=Virtual-1,1680x1050,auto,1
       monitor=,1680x1050,auto,1
     '';
-    systemd.enable = true;
   };
 }

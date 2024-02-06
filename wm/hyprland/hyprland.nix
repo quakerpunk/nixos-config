@@ -68,6 +68,7 @@
       bind=$mainMod, Space, exec, fuzzel
       bind=$mainMod, e, exec, emacs
       bind=$mainMod, f, exec, thunar
+      bind=$mainMod, q, killactive
       bind=$mainMod, v, exec, cliphist list | fuzzel -d | cliphist decode | wl-copy
       bind=$mainMod, w, exec, firefox
       bind=$mainMod, x, exec, fnottctl dismiss

@@ -93,15 +93,18 @@
       bind=$mainMod SHIFT,K,movewindow,u
       bind=$mainMod SHIFT,L,movewindow,r
 
-      bind=$mainMod,1,exec,hyprworkspace 1
-      bind=$mainMod,2,exec,hyprworkspace 2
-      bind=$mainMod,3,exec,hyprworkspace 3
-      bind=$mainMod,4,exec,hyprworkspace 4
-      bind=$mainMod,5,exec,hyprworkspace 5
-      bind=$mainMod,6,exec,hyprworkspace 6
-      bind=$mainMod,7,exec,hyprworkspace 7
-      bind=$mainMod,8,exec,hyprworkspace 8
-      bind=$mainMod,9,exec,hyprworkspace 9
+      # Switch workspaces with mainMod + [0-9]
+      # Taken from Hyprland default config.
+      bind = $mainMod, 1, workspace, 1
+      bind = $mainMod, 2, workspace, 2
+      bind = $mainMod, 3, workspace, 3
+      bind = $mainMod, 4, workspace, 4
+      bind = $mainMod, 5, workspace, 5
+      bind = $mainMod, 6, workspace, 6
+      bind = $mainMod, 7, workspace, 7
+      bind = $mainMod, 8, workspace, 8
+      bind = $mainMod, 9, workspace, 9
+      bind = $mainMod, 0, workspace, 10
 
       bind=$mainMod SHIFT,1,movetoworkspace,1
       bind=$mainMod SHIFT,2,movetoworkspace,2
@@ -112,6 +115,8 @@
       bind=$mainMod SHIFT,7,movetoworkspace,7
       bind=$mainMod SHIFT,8,movetoworkspace,8
       bind=$mainMod SHIFT,9,movetoworkspace,9
+
+      env=WLR_NO_HARDWARE_CURSORS,1
 
       monitor=Virtual-1,1680x1050,auto,1
       monitor=,1680x1050,auto,1

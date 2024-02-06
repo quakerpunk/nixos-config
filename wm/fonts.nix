@@ -2,7 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    nerdfonts
     (nerdfonts.override { fonts = [ "Inconsolata" "Noto" "JetBrainsMono" ]; })
     font-awesome
     inconsolata

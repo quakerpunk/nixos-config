@@ -116,6 +116,9 @@
       bind=$mainMod SHIFT,8,movetoworkspace,8
       bind=$mainMod SHIFT,9,movetoworkspace,9
 
+      bind=$mainMod CTRL,right,workspace,+1
+      bind=$mainMod CTRL,left,workspace,-1
+
       env=WLR_NO_HARDWARE_CURSORS,1
 
       monitor=Virtual-1,1680x1050,auto,1

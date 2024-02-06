@@ -76,6 +76,12 @@
       bind=$mainMod SHIFT, Q, exit
       bind=$mainMod SHIFT, X, exec, fnottctl dismiss all
 
+      bind=$mainMod SHIFT,SPACE,fullscreen,1
+      bind=ALT,TAB,cyclenext
+      bind=ALT,TAB,bringactivetotop
+      bind=ALTSHIFT,TAB,cyclenext,prev
+      bind=ALTSHIFT,TAB,bringactivetotop
+
       monitor=Virtual-1,1680x1050,auto,1
       monitor=,1680x1050,auto,1
     '';

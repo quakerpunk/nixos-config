@@ -7,5 +7,5 @@
     xfce.thunar-volman
   ];
 
-  prgorams.thunar.enable = true;
+  programs.thunar.enable = true;
 }

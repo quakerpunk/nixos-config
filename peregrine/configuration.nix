@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       # ../wm/hyprland/dbus.nix # dbus
       ../system/hyprland.nix
+      ../system/thunar.nix
     ];
 
   # Use the GRUB 2 boot loader.

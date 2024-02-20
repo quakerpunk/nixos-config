@@ -16,5 +16,8 @@
 
   home.packages = with pkgs; [
     doomEmacsBase
-  ]
+  ];
+
+  services.emacs.package = pkgs.doomEmacsBase;
+  services.emacs.enable = true;
 }

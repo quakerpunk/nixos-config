@@ -25,6 +25,7 @@
   imports = [
     ../../common/apps/terminal/kitty.nix # config for Kitty
     ../../common/apps/browsers/firefox.nix
+    ../../common/apps/editors/emacs.nix
     ../../common/git.nix # git config
     # ../wm/hyprland/dbus.nix # dbus
      ./fuzzel.nix # fuzzel

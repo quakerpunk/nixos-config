@@ -2,8 +2,8 @@
 {
   nixpkgs.overlays = [
     (import (builtins.fetchTarball {
-      url = https://github.com/nix-community/emacs-overlay/archive/347752976096227aed7d06226e1045b5f0112386.tar.gz;
-      sha256 = 347752976096227aed7d06226e1045b5f0112386;
+      url = "https://github.com/nix-community/emacs-overlay/archive/347752976096227aed7d06226e1045b5f0112386.tar.gz";
+      sha256 = "347752976096227aed7d06226e1045b5f0112386";
     }))
     (self: super: {
       doomEmacsBase = super.emacsGit.override {

@@ -2,7 +2,7 @@
 
 {
 
-  imports = [ ../picom/picom.nix
+  imports = [ #../picom/picom.nix
               ../../common/apps/terminal/kitty.nix
               #( import ../../app/dmenu-scripts/networkmanager-dmenu.nix {dmenu_command = "rofi -show dmenu"; inherit pkgs;})
             ];

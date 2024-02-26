@@ -4,6 +4,8 @@
 
   imports = [ #../picom/picom.nix
               ../../common/apps/terminal/kitty.nix
+	      ../../common/apps/editors/doom.nix
+	      ../../common/git.nix
               #( import ../../app/dmenu-scripts/networkmanager-dmenu.nix {dmenu_command = "rofi -show dmenu"; inherit pkgs;})
             ];
 

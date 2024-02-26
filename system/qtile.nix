@@ -14,7 +14,7 @@
       extraPackages = python3Packages: with python3Packages; []; 
     };
     displayManager = {
-      defaultSession = "lightdm";
+      defaultSession = "none+qtile";
     };
   };
 }

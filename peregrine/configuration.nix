@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       # ../wm/hyprland/dbus.nix # dbus
-      ../system/hyprland.nix
+      ../system/qtile.nix
       ../system/thunar.nix
     ];
 

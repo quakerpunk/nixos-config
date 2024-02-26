@@ -73,7 +73,7 @@
   programs.home-manager.enable = true;
 
   imports = [
-    ../wm/hyprland/hyprland.nix # fnott for notifications
+    ../wm/qtile/qtile.nix
     ../common/shellgame.nix # zsh config
   ];
 }

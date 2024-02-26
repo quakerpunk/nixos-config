@@ -20,6 +20,8 @@
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
+
+    #Webkit for Emacs
   ];
 
   imports = [

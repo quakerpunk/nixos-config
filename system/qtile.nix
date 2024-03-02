@@ -12,7 +12,7 @@
     windowManager.qtile = {
       enable = true;
       extraPackages = python3Packages: with python3Packages; [
-        qtile-extras 
+        (qtile-extras.overridePythonAttrs(old: { disabledTestPaths = [ "test/widget/test_strava.py" ]; }))
       ]; 
     };
     displayManager = {
@@ -20,4 +20,3 @@
     };
   };
 }
-

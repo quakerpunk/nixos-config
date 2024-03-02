@@ -39,6 +39,7 @@
     xdg-desktop-portal-gtk
     scrot
     picom
+    webkitgtk
   ];
 
   home.file.".config/picom/picom.conf".source = ./picom.conf;

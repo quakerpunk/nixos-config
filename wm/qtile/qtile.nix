@@ -11,6 +11,7 @@
             ];
 
   home.packages = with pkgs; [
+    python311Packages.qtile-extras
     networkmanagerapplet
     dunst
     autorandr

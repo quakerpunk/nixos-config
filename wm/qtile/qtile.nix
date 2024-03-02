@@ -42,6 +42,7 @@
   ];
 
   home.file.".config/picom/picom.conf".source = ./picom.conf;
+  home.file.".config/qtile/config.py".source = ./qtile.py;
 
   programs.feh.enable = true;
   programs.rofi.enable = true;

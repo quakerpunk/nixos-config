@@ -43,6 +43,7 @@
 
   home.file.".config/picom/picom.conf".source = ./picom.conf;
   home.file.".config/qtile/config.py".source = ./qtile.py;
+  home.file.".config/qtile/colors.py".source = ./colors.py;
 
   programs.feh.enable = true;
   programs.rofi.enable = true;

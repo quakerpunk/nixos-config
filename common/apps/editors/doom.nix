@@ -6,7 +6,7 @@
 sha256 = "0prm07hjb78b43y9zp1ldd6yp1gncvff5w1mixys8njdbabhi5a1";
     }))
     (self: super: {
-      doomEmacsBase = super.emacs-pgtk.override {
+      doomEmacsBase = super.emacs-gtk3.override {
         withNativeCompilation = true;
         withTreeSitter = true;
         withXwidgets = true;
@@ -21,7 +21,7 @@ sha256 = "0prm07hjb78b43y9zp1ldd6yp1gncvff5w1mixys8njdbabhi5a1";
   #services.emacs.package = pkgs.doomEmacsBase;
   programs.emacs = {
     enable = true;
-    package = pkgs.emacs29-pgtk;
+    package = pkgs.emacs29-gtk3;
   };
   services.emacs.enable = true;
 }

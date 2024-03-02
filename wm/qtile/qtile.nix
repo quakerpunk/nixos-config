@@ -5,6 +5,7 @@
   imports = [ #../picom/picom.nix
               ../../common/apps/terminal/kitty.nix
 	      ../../common/apps/editors/doom.nix
+    	      ../../common/apps/browsers/firefox.nix
 	      ../../common/git.nix
               #( import ../../app/dmenu-scripts/networkmanager-dmenu.nix {dmenu_command = "rofi -show dmenu"; inherit pkgs;})
             ];
@@ -13,8 +14,8 @@
     networkmanagerapplet
     dunst
     autorandr
-    #alacritty
-    kitty
+    alacritty
+    #kitty
     dmenu
     rofi
     keepmenu
@@ -36,7 +37,11 @@
     xdg-utils
     xdg-desktop-portal
     xdg-desktop-portal-gtk
+    scrot
+    picom
   ];
+
+  home.file.".config/picom/picom.conf".source = ./picom.conf;
 
   programs.feh.enable = true;
   programs.rofi.enable = true;

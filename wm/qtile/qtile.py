@@ -25,6 +25,7 @@
 # SOFTWARE.
 
 import os
+from pathlib import Path
 import subprocess
 from libqtile import bar, extension, hook, layout, qtile, widget
 from libqtile.config import Click, Drag, Group, Key, KeyChord, Match, Screen
@@ -529,10 +530,14 @@ auto_minimize = True
 # When using the Wayland backend, this can be used to configure input devices.
 wl_input_rules = None
 
+# def start_once():
+#     home = os.path.expanduser('~')
+#     subprocess.call([home + '/.config/qtile/autostart.sh'])
+
 @hook.subscribe.startup_once
-def start_once():
-    home = os.path.expanduser('~')
-    subprocess.call([home + '/.config/qtile/autostart.sh'])
+def autostart():
+    home = Path('~/.config/qtile/autostart.sh').expanduser()
+    subprocess.run(home)
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the

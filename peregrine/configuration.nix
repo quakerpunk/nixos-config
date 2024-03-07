@@ -78,6 +78,7 @@
     git
     bat
     wayland
+    emacs29-pgtk
   ];
 
   environment.shells = with pkgs; [ zsh ];

@@ -4,7 +4,7 @@ COLORSCHEME=GruvboxDark
 
 
 ### AUTOSTART PROGRAMS ###
-xrandr --output Virtual-1 --mode 1600x1200
+xrandr --output Virtual-1 --mode 1680x1050
 #lxsession &
 picom --daemon &
 #/usr/bin/emacs --daemon &

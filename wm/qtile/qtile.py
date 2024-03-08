@@ -233,7 +233,7 @@ keys.extend([
 ])
 
 
-colors = colors.DoomOne
+colors = colors.OceanicNext
 
 layout_theme = {"border_width": 2,
                 "margin": 8,

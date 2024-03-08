@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COLORSCHEME=GruvboxDark
+COLORSCHEME=OceanicNext
 
 
 ### AUTOSTART PROGRAMS ###

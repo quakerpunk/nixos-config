@@ -38,7 +38,7 @@ import colors
 
 mod = "mod4"              # Sets mod key to SUPER/WINDOWS
 myTerm = "alacritty"      # My terminal of choice
-myBrowser = "brave"       # My browser of choice
+myBrowser = "firefox"       # My browser of choice
 myEmacs = "emacsclient -c -a 'emacs' " # The space at the end is IMPORTANT!
 
 # Allows you to input a name when adding treetab section.
@@ -66,8 +66,8 @@ def maximize_by_switching_layout(qtile):
 keys = [
     # The essentials
     Key([mod], "Return", lazy.spawn(myTerm), desc="Terminal"),
-    Key([mod, "shift"], "Return", lazy.spawn("rofi -show drun"), desc='Run Launcher'),
-    Key([mod], "b", lazy.spawn(myBrowser), desc='Web browser'),
+    Key([mod], "space", lazy.spawn("rofi -show drun"), desc='Run Launcher'),
+    Key([mod], "w", lazy.spawn(myBrowser), desc='Web browser'),
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
@@ -82,7 +82,7 @@ keys = [
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
+    # Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
 
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
@@ -153,9 +153,10 @@ keys = [
         Key([], "b", lazy.spawn(myEmacs + "--eval '(ibuffer)'"), desc='Emacs Ibuffer'),
         Key([], "d", lazy.spawn(myEmacs + "--eval '(dired nil)'"), desc='Emacs Dired'),
         Key([], "i", lazy.spawn(myEmacs + "--eval '(erc)'"), desc='Emacs ERC'),
+        Key([], "r", lazy.spawn(myEmacs + "--eval '(elfeed)'"), desc='Elfeed'),
         Key([], "s", lazy.spawn(myEmacs + "--eval '(eshell)'"), desc='Emacs Eshell'),
         Key([], "v", lazy.spawn(myEmacs + "--eval '(vterm)'"), desc='Emacs Vterm'),
-        Key([], "w", lazy.spawn(myEmacs + "--eval '(eww \"distro.tube\")'"), desc='Emacs EWW'),
+        Key([], "w", lazy.spawn(myEmacs + "--eval '(eww \"shawnborton.dev\")'"), desc='Emacs EWW'),
         Key([], "F4", lazy.spawn("killall emacs"),
                       lazy.spawn("/usr/bin/emacs --daemon"),
                       desc='Kill/restart the Emacs daemon')
@@ -216,6 +217,21 @@ for i in groups:
             ),
         ]
     )
+
+groups.append(ScratchPad("10", [
+    #DropDown("chatgpt", "chromium --app=https://chat.openai.com", x=0.3, y=0.1, width=0.40, height=0.4, on_focus_lost_hide=False ),
+    #DropDown("mousepad", "mousepad", x=0.3, y=0.1, width=0.40, height=0.4, on_focus_lost_hide=False ),
+    DropDown("terminal", "alacritty", x=0.3, y=0.1, width=0.40, height=0.4, on_focus_lost_hide=False ),
+    #DropDown("scrcpy", "scrcpy -d", x=0.8, y=0.05, width=0.15, height=0.6, on_focus_lost_hide=False )
+]))
+
+keys.extend([
+    #Key([mod], 'F10', lazy.group["10"].dropdown_toggle("chatgpt")),
+    #Key([mod], 'F11', lazy.group["10"].dropdown_toggle("mousepad")),
+    Key([mod], 'F12', lazy.group["10"].dropdown_toggle("terminal")),
+    #Key([mod], 'F9', lazy.group["10"].dropdown_toggle("scrcpy"))
+])
+
 
 colors = colors.DoomOne
 

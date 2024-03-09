@@ -11,5 +11,6 @@
     window.padding.y = 15;
     font.normal.family = "JetBrains Mono";
     font.normal.style = "Regular";
+    font.size = 9;
   };
 }

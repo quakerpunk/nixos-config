@@ -3,7 +3,8 @@
 {
 
   imports = [ #../picom/picom.nix
-    ../../common/apps/terminal/kitty.nix
+    ../../common/apps/terminal/alacritty.nix
+    #../../common/apps/terminal/kitty.nix
     ../../common/apps/editors/doom.nix
     ../../common/apps/browsers/firefox.nix
     ../../common/git.nix
@@ -14,7 +15,7 @@
     networkmanagerapplet
     dunst
     autorandr
-    alacritty
+    #alacritty
     #kitty
     dmenu
     rofi

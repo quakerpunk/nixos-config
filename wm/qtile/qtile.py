@@ -415,7 +415,7 @@ def init_widgets_list():
         #              )
         #          ],
         #          ),
-        widget.Spacer(length = 8),
+        # widget.Spacer(length = 8),
         # widget.KeyboardLayout(
         #          foreground = colors[4],
         #          fmt = '⌨  Kbd: {}',
@@ -426,7 +426,7 @@ def init_widgets_list():
         #              )
         #          ],
         #          ),
-        widget.Spacer(length = 8),
+        # widget.Spacer(length = 8),
         widget.Clock(
                  foreground = colors[8],
                  format = "⏱  %a, %b %d - %H:%M",

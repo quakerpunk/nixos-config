@@ -356,23 +356,23 @@ def init_widgets_list():
                  func = lambda: subprocess.check_output("printf $(uname -r)", shell=True, text=True),
                  foreground = colors[3],
                  fmt = '❤  {}',
-                 decorations=[
-                     BorderDecoration(
-                         colour = colors[3],
-                         border_width = [0, 0, 2, 0],
-                     )
-                 ],
+                 # decorations=[
+                 #     BorderDecoration(
+                 #         colour = colors[3],
+                 #         border_width = [0, 0, 2, 0],
+                 #     )
+                 # ],
                  ),
         widget.Spacer(length = 8),
         widget.CPU(
                  format = '▓  Cpu: {load_percent}%',
                  foreground = colors[4],
-                 decorations=[
-                     BorderDecoration(
-                         colour = colors[4],
-                         border_width = [0, 0, 2, 0],
-                     )
-                 ],
+                 # decorations=[
+                 #     BorderDecoration(
+                 #         colour = colors[4],
+                 #         border_width = [0, 0, 2, 0],
+                 #     )
+                 # ],
                  ),
         widget.Spacer(length = 8),
         widget.Memory(
@@ -380,12 +380,12 @@ def init_widgets_list():
                  mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e htop')},
                  format = '{MemUsed: .0f}{mm}',
                  fmt = '🖥  Mem: {} used',
-                 decorations=[
-                     BorderDecoration(
-                         colour = colors[8],
-                         border_width = [0, 0, 2, 0],
-                     )
-                 ],
+                 # decorations=[
+                 #     BorderDecoration(
+                 #         colour = colors[8],
+                 #         border_width = [0, 0, 0, 0],
+                 #     )
+                 # ],
                  ),
         widget.Spacer(length = 8),
         widget.DF(
@@ -397,45 +397,45 @@ def init_widgets_list():
                  format = '{uf}{m} free',
                  fmt = '🖴  Disk: {}',
                  visible_on_warn = False,
-                 decorations=[
-                     BorderDecoration(
-                         colour = colors[5],
-                         border_width = [0, 0, 2, 0],
-                     )
-                 ],
+                 # decorations=[
+                 #     BorderDecoration(
+                 #         colour = colors[5],
+                 #         border_width = [0, 0, 2, 0],
+                 #     )
+                 # ],
                  ),
         widget.Spacer(length = 8),
-        widget.Volume(
-                 foreground = colors[7],
-                 fmt = '🕫  Vol: {}',
-                 decorations=[
-                     BorderDecoration(
-                         colour = colors[7],
-                         border_width = [0, 0, 2, 0],
-                     )
-                 ],
-                 ),
+        # widget.Volume(
+        #          foreground = colors[7],
+        #          fmt = '🕫  Vol: {}',
+        #          decorations=[
+        #              BorderDecoration(
+        #                  colour = colors[7],
+        #                  border_width = [0, 0, 2, 0],
+        #              )
+        #          ],
+        #          ),
         widget.Spacer(length = 8),
-        widget.KeyboardLayout(
-                 foreground = colors[4],
-                 fmt = '⌨  Kbd: {}',
-                 decorations=[
-                     BorderDecoration(
-                         colour = colors[4],
-                         border_width = [0, 0, 2, 0],
-                     )
-                 ],
-                 ),
+        # widget.KeyboardLayout(
+        #          foreground = colors[4],
+        #          fmt = '⌨  Kbd: {}',
+        #          decorations=[
+        #              BorderDecoration(
+        #                  colour = colors[4],
+        #                  border_width = [0, 0, 2, 0],
+        #              )
+        #          ],
+        #          ),
         widget.Spacer(length = 8),
         widget.Clock(
                  foreground = colors[8],
                  format = "⏱  %a, %b %d - %H:%M",
-                 decorations=[
-                     BorderDecoration(
-                         colour = colors[8],
-                         border_width = [0, 0, 2, 0],
-                     )
-                 ],
+                 # decorations=[
+                 #     BorderDecoration(
+                 #         colour = colors[8],
+                 #         border_width = [0, 0, 2, 0],
+                 #     )
+                 # ],
                  ),
         widget.Spacer(length = 8),
         widget.Systray(padding = 3),

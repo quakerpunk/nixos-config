@@ -36,6 +36,7 @@
     neofetch
     onefetch
     ripgrep
+    syncthing
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

@@ -79,6 +79,7 @@
     bat
     wayland
     emacs29-pgtk
+    unzip
   ];
 
   environment.shells = with pkgs; [ zsh ];

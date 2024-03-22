@@ -14,9 +14,11 @@ sha256 = "0prm07hjb78b43y9zp1ldd6yp1gncvff5w1mixys8njdbabhi5a1";
     })
   ];
 
-  #home.packages = with pkgs; [
+  home.packages = with pkgs; [
   #  doomEmacsBase
-  #];
+    aspell aspellDicts.en
+    vale
+  ];
 
   #services.emacs.package = pkgs.doomEmacsBase;
   programs.emacs = {

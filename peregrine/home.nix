@@ -31,12 +31,28 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     # alacritty
+    #dconf
     eza
     fd
     neofetch
     onefetch
     ripgrep
     syncthing
+    (pkgs.writeShellScriptBin "add-ssh-key" ''
+      #!/bin/zsh
+
+      # Check if an SSH key path is provided as an argument
+      if [ -z "$1" ]; then
+        echo "Usage: $0 <path_to_ssh_key>"
+        exit 1
+      fi
+
+      # Start the ssh-agent process
+      eval "$(ssh-agent -s)"
+
+      # Add the specified SSH key to the agent
+      ssh-add "$1"
+     '')
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

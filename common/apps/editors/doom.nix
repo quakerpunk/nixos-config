@@ -17,13 +17,20 @@ sha256 = "0prm07hjb78b43y9zp1ldd6yp1gncvff5w1mixys8njdbabhi5a1";
   home.packages = with pkgs; [
   #  doomEmacsBase
     aspell aspellDicts.en
+    pandoc
     vale
   ];
 
   #services.emacs.package = pkgs.doomEmacsBase;
   programs.emacs = {
     enable = true;
-    package = pkgs.emacs29-pgtk;
+    #package = pkgs.emacs29-pgtk;
+    package = (pkgs.emacs29.override {
+      withNativeCompilation = true;
+      withTreeSitter = true;
+      withXwidgets = true;
+      withGTK3 = true;
+    });
   };
   services.emacs.enable = true;
 }

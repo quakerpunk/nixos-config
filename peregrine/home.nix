@@ -70,6 +70,21 @@
     # EDITOR = "emacs";
   };
 
+  gtk = {
+    enable = true;
+    gtk3 = {
+      extraConfig = {
+        gtk-xft-antialias = 1;
+        gtk-xft-hinting = 1;
+        gtk-xft-hintstyle = "hintmedium";
+        gtk-xft-rgba = "rgba";
+      };
+    };
+    theme = {
+      name = "SolArc-Dark";
+      package = pkgs.solarc-gtk-theme;
+    };
+  };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 

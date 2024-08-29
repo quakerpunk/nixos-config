@@ -161,7 +161,7 @@ keys = [
         Key([], "v", lazy.spawn(myEmacs + "--eval '(vterm)'"), desc='Emacs Vterm'),
         Key([], "w", lazy.spawn(myEmacs + "--eval '(eww \"shawnborton.dev\")'"), desc='Emacs EWW'),
         Key([], "F4", lazy.spawn("killall emacs"),
-                      lazy.spawn("/usr/bin/emacs --daemon"),
+                      lazy.spawn("/home/shawnb/.nix-profile/emacs --daemon"),
                       desc='Kill/restart the Emacs daemon')
     ]),
     # Dmenu/rofi scripts launched using the key chord SUPER+p followed by 'key'

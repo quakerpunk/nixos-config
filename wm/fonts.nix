@@ -10,5 +10,6 @@
     jetbrains-mono
     powerline
     ubuntu_font_family
+    emacsPackages.nerd-icons
   ];
 }

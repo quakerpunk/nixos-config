@@ -7,10 +7,13 @@
             ];
 
   # Configure X11
+  services.libinput = {
+    touchpad.disableWhileTyping = true;
+  };
   services.xserver = {
     enable = true;
-    layout = "us";
-    xkbVariant = "";
+    xkb.layout = "us";
+    xkb.variant = "";
     #xkbOptions = "caps:escape";
     excludePackages = [ pkgs.xterm ];
     displayManager = {
@@ -22,9 +25,6 @@
       xset s 300
       ${pkgs.lightlocker}/bin/light-locker --idle-hint &
     '';
-    };
-    libinput = {
-      touchpad.disableWhileTyping = true;
     };
   };
 }

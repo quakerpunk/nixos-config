@@ -10,7 +10,7 @@
       cat = "bat";
       weather = "curl wttr.in/dallas";
     };
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     enableCompletion = true;
     enable = true;
     syntaxHighlighting.enable = true;

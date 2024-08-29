@@ -60,6 +60,9 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  # Enable qemu-guest-agent
+  services.qemuGuest.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.shawnb = {
     isNormalUser = true;

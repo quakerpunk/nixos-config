@@ -19,6 +19,7 @@
   #oh-my-zsh
   programs.zsh.oh-my-zsh = {
     enable = true;
-    theme = "robbyrussell";
+    #theme = "robbyrussell";
+    theme = "geoffgarside";
   };
 }

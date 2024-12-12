@@ -80,9 +80,10 @@
     zsh
     git
     bat
-    wayland
+    #wayland
     emacs29-pgtk
     unzip
+    samba
   ];
 
   environment.shells = with pkgs; [ zsh ];

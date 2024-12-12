@@ -35,6 +35,8 @@
     brightnessctl
     xorg.xcursorthemes
     xorg.xev
+    xorg.xprop
+    xorg.xwininfo
     xdg-utils
     xdg-desktop-portal
     xdg-desktop-portal-gtk
@@ -54,5 +56,14 @@
 
   services.autorandr.enable = true;
   programs.autorandr.enable = true;
+
+  xdg.desktopEntries.org-protocol = {
+    name = "org-protocol";
+    exec = "emacsclient -- %u";
+    terminal = false;
+    type = "Application";
+    categories = ["System"];
+    mimeType = ["x-scheme-handler/org-protocol"];
+  };
 }
 

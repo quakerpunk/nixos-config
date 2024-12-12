@@ -154,8 +154,9 @@ keys = [
         Key([], "c", lazy.spawn("/home/shawnb/.config/emacs/bin/org-capture"), desc='Org Capture'),
         Key([], "d", lazy.spawn(myEmacs + "--eval '(dired nil)'"), desc='Emacs Dired'),
         Key([], "i", lazy.spawn(myEmacs + "--eval '(erc)'"), desc='Emacs ERC'),
+        Key([], "k", lazy.spawn("/home/shawnb/.config/emacs/bin/doom +everywhere"), desc='Emacs Everywhere'),
         Key([], "p", lazy.spawn(myEmacs + "--eval '(pocket-reader)'"), desc='Pocket Reader'),
-        Key([], "r", lazy.spawn(myEmacs + "--eval '(elfeed-search)'"), desc='Elfeed'),
+        Key([], "r", lazy.spawn(myEmacs + "--eval '(elfeed)'"), desc='Elfeed'),
         Key([], "s", lazy.spawn(myEmacs + "--eval '(eshell)'"), desc='Emacs Eshell'),
         Key([], "t", lazy.spawn("/home/shawnb/.config/emacs/bin/org-tangle"), desc='Org Tangle'),
         Key([], "v", lazy.spawn(myEmacs + "--eval '(vterm)'"), desc='Emacs Vterm'),
@@ -191,7 +192,7 @@ group_labels = ["1", "2", "3", "4", "5", "6", "7", "8", "9",]
 #group_labels = ["DEV", "WWW", "SYS", "DOC", "VBOX", "CHAT", "MUS", "VID", "GFX",]
 #group_labels = ["", "", "", "", "", "", "", "", "",]
 
-group_layouts = ["max", "monadtall", "tile", "tile", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall"]
+group_layouts = ["max", "monadtall", "monadtall", "tile", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall"]
 
 for i in range(len(group_names)):
     groups.append(

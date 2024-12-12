@@ -34,13 +34,12 @@
     #dconf
     eza
     fd
+    nixfmt-classic
     neofetch
     onefetch
     ripgrep
     syncthing
     (pkgs.writeShellScriptBin "add-ssh-key" ''
-      #!/bin/zsh
-
       # Check if an SSH key path is provided as an argument
       if [ -z "$1" ]; then
         echo "Usage: $0 <path_to_ssh_key>"
@@ -102,7 +101,16 @@
     };
   };
   # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  programs = {
+    direnv = {
+      enable = true;
+      enableZshIntegration = true;
+      nix-direnv.enable = true;
+    };
+
+    home-manager.enable = true;
+  };
+
 
   imports = [
     ../wm/qtile/qtile.nix

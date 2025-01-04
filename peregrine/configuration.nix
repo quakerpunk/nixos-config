@@ -84,6 +84,8 @@
     emacs29-pgtk
     unzip
     samba
+    gnupg
+    pinentry-all
   ];
 
   environment.shells = with pkgs; [ zsh ];
@@ -91,6 +93,11 @@
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
   programs.dconf.enable = true;
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep 5";
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

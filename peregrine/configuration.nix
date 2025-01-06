@@ -20,6 +20,7 @@
   # boot.loader.efi.efiSysMountPoint = "/boot/efi";
   # Define on which hard drive you want to install Grub.
   boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
+  boot.growPartition = true;
 
   networking.hostName = "peregrine"; # Define your hostname.
   # Pick only one of the below networking options.

@@ -73,6 +73,7 @@
       enable = true;
       settings.PasswordAuthentication = false;
       settings.KbdInteractiveAuthentication = false;
+      ports = [ 2112 ];
     };
     programs.ssh.startAgent = true;
 

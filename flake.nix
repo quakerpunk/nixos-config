@@ -7,9 +7,11 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixos-generators.url = "github:nix-community/nixos-generators";
+    nixos-generators.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixos-generators, ... }@inputs:
     let
       name = "Shawn Borton";
       email = "shawn@shawnborton.info";
@@ -38,6 +40,16 @@
           };
         };
     #};
+      };
+      packages.x86_64-linux = {
+        lxc_test = nixos-generators.nixosGenerate {
+          system = system;
+          modules = [
+            ./lxc_test/configuration.nix
+          ];
+         # modules = [ (./. + "/lxc-test/configuration.nix") ];
+          format = "proxmox-lxc";
+        };
       };
   };
 }

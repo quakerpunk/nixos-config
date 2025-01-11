@@ -50,7 +50,7 @@
         cat = "bat";
       };
       enable = lib.mkDefault true;
-      autosuggestion.enable = lib.mkDefault true;
+      autosuggestions.enable = lib.mkDefault true;
     };
 
     #oh-my-zsh
@@ -66,7 +66,7 @@
       fsType = "ext4";
     };
 
-    system.stateVersion = lib.mkDefault "24.05";
+    system.stateVersion = lib.mkDefault "24.11";
 
     security.sudo.wheelNeedsPassword = false; # Don't ask for passwords
     services.openssh = {
@@ -81,10 +81,9 @@
       isNormalUser = true;
       description = "Shawn Borton";
       extraGroups = [ "networkmanager" "wheel" ];
+      openssh.authorizedKeys.keys = [
+        "YOUR SSH PUBLIC KEY"
+      ];
     };
-
-    users.users.your_username.openssh.authorizedKeys.keys = [
-      "YOUR SSH PUBLIC KEY"
-    ];
   };
 }

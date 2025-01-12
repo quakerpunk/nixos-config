@@ -23,14 +23,6 @@
     nix.settings.trusted-users = [ "root" "@wheel" ];
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-    # Enable mDNS for `hostname.local` addresses
-    services.avahi.enable = true;
-    services.avahi.nssmdns4 = true;
-    services.avahi.publish = {
-      enable = true;
-      addresses = true;
-    };
-
     # Some sane packages we need on every system
     environment.systemPackages = with pkgs; [
       vim  # for emergencies

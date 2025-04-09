@@ -28,7 +28,7 @@ sha256 = "0prm07hjb78b43y9zp1ldd6yp1gncvff5w1mixys8njdbabhi5a1";
     package = (pkgs.emacs.override {
       withNativeCompilation = true;
       withTreeSitter = true;
-      withXwidgets = true;
+      # withXwidgets = true;
       withGTK3 = true;
     });
   };

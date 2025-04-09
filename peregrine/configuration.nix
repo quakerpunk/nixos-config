@@ -82,7 +82,7 @@
     git
     bat
     #wayland
-    emacs29-pgtk
+    emacs-pgtk
     unzip
     samba
     gnupg

@@ -5,13 +5,12 @@
 { config, lib, pkgs, hostname, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      # ../wm/hyprland/dbus.nix # dbus
-      ../system/qtile.nix
-      ../system/thunar.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    # ../wm/hyprland/dbus.nix # dbus
+    ../system/qtile.nix
+    ../system/thunar.nix
+  ];
 
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
@@ -68,9 +67,10 @@
   users.users.shawnb = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-  #    firefox
-    ];
+    packages = with pkgs;
+      [
+        #    firefox
+      ];
   };
 
   # List packages installed in system profile. To search, run:
@@ -87,6 +87,7 @@
     samba
     gnupg
     pinentry-all
+    hledger
   ];
 
   environment.shells = with pkgs; [ zsh ];

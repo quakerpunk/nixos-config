@@ -10,6 +10,9 @@
     #Provide a default hostname
     networking.hostName = lib.mkDefault "base";
 
+    # Time Zone
+    time.timeZone = "America/Chicago";
+
     # Enable QEMU Guest for Proxmox
     services.qemuGuest.enable = lib.mkDefault true;
 
@@ -25,7 +28,7 @@
 
     # Some sane packages we need on every system
     environment.systemPackages = with pkgs; [
-      vim  # for emergencies
+      vim # for emergencies
       git # for pulling nix flakes
       zsh
       bat
@@ -48,7 +51,7 @@
     #oh-my-zsh
     programs.zsh.ohMyZsh = {
       enable = lib.mkDefault true;
-      theme = lib.mkDefault "geoffgarside";
+      theme = lib.mkDefault "jtriley";
     };
 
     # Default filesystem
@@ -75,7 +78,7 @@
       description = "Shawn Borton";
       extraGroups = [ "networkmanager" "wheel" ];
       openssh.authorizedKeys.keys = [
-        "YOUR SSH PUBLIC KEY"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILgyiCfvu21kVTfRyKjzpH+93k7Jsf+EqLfN6NtolHnf tech@shilohsvillage.com"
       ];
     };
   };

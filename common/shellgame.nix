@@ -9,6 +9,7 @@
       ls = "eza --icons -l -T -L=1";
       cat = "bat";
       weather = "curl wttr.in/dallas";
+      ledger = "hledger.sh";
     };
     autosuggestion.enable = true;
     enableCompletion = true;
